@@ -3,8 +3,15 @@ import React, { Component, ErrorInfo } from "react";
 import { Link, Redirect } from "@reach/router";
 
 class ErrorBoundary extends Component {
+<<<<<<< HEAD
   public state = { hasError: false, redirect: false };
 
+=======
+  public state = {
+    redirect: "",
+    hasError: false
+  };
+>>>>>>> b9b0ab77add25ebb0080b89223a92503735c3732
   public static getDerivedStateFromError() {
     return { hasError: true };
   }
@@ -18,7 +25,11 @@ class ErrorBoundary extends Component {
   }
   public render() {
     if (this.state.redirect) {
+<<<<<<< HEAD
       return <Redirect to="/" noThrow />;
+=======
+      return <Redirect to="/" />;
+>>>>>>> b9b0ab77add25ebb0080b89223a92503735c3732
     }
 
     if (this.state.hasError) {
